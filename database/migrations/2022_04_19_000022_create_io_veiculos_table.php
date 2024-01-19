@@ -1,0 +1,19 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateIoVeiculosTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('io_veiculos', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->datetime('data_hora');
+            $table->string('operacao');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+}
